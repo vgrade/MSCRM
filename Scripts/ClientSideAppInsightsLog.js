@@ -11,7 +11,7 @@ ApplicationInsights = {
  });
  window.appInsights = appInsights;
 
-appInsights.trackPageView(entityName, Xrm.Utility.getGlobalContext().getClientUrl() 
+appInsights.trackPageView(entityName, Xrm.Utility.getGlobalContext().getClientUrl() , properties);
  }
 }
  
