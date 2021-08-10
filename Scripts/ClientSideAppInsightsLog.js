@@ -15,7 +15,7 @@ appInsights.trackPageView(entityName, Xrm.Utility.getGlobalContext().getClientUr
  }
 }
  
-//Add eventhandler in ms crm form on load of your form and passexecution context and entityName parameter
+//Add eventhandler in ms crm form on load of your form and pass execution context and entityName parameter
 thisEntity.formOnLoad = function (executionContext,entityName) {
     "use strict";
 var formContext = executionContext.getFormContext(); 
@@ -26,7 +26,7 @@ var properties = { User: userSettings.userName, ObjectId: formContext.data.entit
  ApplicationInsights.trackApplicationInsight(entityName, properties);
 };
 
-//Add eventhandler in ms crm form on save of your form and passexecution context and entityName parameter
+//Add eventhandler in ms crm form on save of your form and pass execution context and entityName parameter
 thisEntity.formOnSave =function(executionContext,entityName)
 {
 var formContext = executionContext.getFormContext(); 
