@@ -1,3 +1,4 @@
+var thisEntity = window.NameSpace || {};
 if (ApplicationInsights === "undefined") {
  var ApplicationInsights = {};
 }
@@ -13,9 +14,7 @@ ApplicationInsights = {
 appInsights.trackPageView(entityName, Xrm.Utility.getGlobalContext().getClientUrl() 
  }
 }
-
-
-var thisEntity = window.NameSpace || {};
+ 
 
 thisEntity.formOnLoad = function (executionContext,entityName) {
     "use strict";
