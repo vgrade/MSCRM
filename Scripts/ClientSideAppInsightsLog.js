@@ -33,6 +33,6 @@ var formContext = executionContext.getFormContext();
  var operationType = '';
  if (formContext.ui.getFormType() == 1) { operationType = 'Create'; } else { operationType = 'Update'; }
 var userSettings = Xrm.Utility.getGlobalContext().userSettings;
-var properties = { User: userSettings.userName, ObjectId: formContext.data.entity.getId(), OperationType: operationType, TriggerEvent: 'Form Load' };
+var properties = { User: userSettings.userName, ObjectId: formContext.data.entity.getId(), OperationType: operationType, TriggerEvent: 'Form Save' };
  ApplicationInsights.trackApplicationInsight(entityName, properties);
 };
